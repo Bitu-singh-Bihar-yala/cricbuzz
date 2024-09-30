@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display:flex;
+            justify-content: space-between;
+            background-color: #009270;
+            border: solid;
+            color: white;
+            text-decoration: center;
+            padding: 8px;
+        }
+
+        .box{
+            height:40px;
+            width: 150px;
+            background-color:#009270;
+            text-align: center;
+            padding: 20px;
+        }
+        input{
+            border-radius:20%;
+        }
+        .count{
+            color: white;
+            display:flex;
+            justify-content: space-between;
+            background-color:#4a4a4a;
+            height: 30px;
+            font-size: 15px;
+            padding: 12px;
+
+        
+        
+        }
+        .count_box{
+            color:#464646;
+            display: flex;
+            font-size: 12px;
+            
+        }
+        .box2{
+            background-color:white;
+            height: 200px;
+            border: solid black;
+            border-radius: 10px;
+            /* text-align: center; */
+            width: 400px;
+            margin: 10px
+        }
+
+        .nav{
+            height: 100px;
+            width: 100px;
+            background-color: #4a4a4a;
+            color: white;
+            display:column;
+
+        }
+
+        .bitu1{
+            height:100px;
+            width:100px;
+            background-color:yellow;
+            display: flex;
+        }
+
+
+
+        .cric{
+            /* display: inline-block;
+            justify-content: space-between;  
+            margin: 20px;
+            padding: 10px 15px;
+            background-color: #ffffff; */
+            border: #464646 solid;
+        } 
+       .box3{
+            display: inline-block;
+            justify-content: space-between;  
+            margin: 20px;
+            padding: 10px 15px;
+            background-color: #ffffff;
+        }
+
+        .call{
+            border: solid #464646;
+
+        }
+        .box4{
+            display: inline-block;
+            justify-content: space-between;  
+            margin: 10px;
+            padding: 20px;
+            background-color: #ffffff;
+            border: #f0f0f0 solid;
+        }
+
+        .bitu{
+            width: 1200px;
+            background-color: #efebec;
+            /* box-shadow: rgba(149,157,165,0.2) 0px 8px 24px; */
+            display: grid;
+            grid-template-columns: 200px 600px 200px;
+            grid-template-rows: 800px 400px 400px;
+            grid-column-gap:50px;
+            border: 2px solid;
+            
+
+        }
+        .item-1 {
+            /* background-color: #009270; */
+            border: 1px solid;
+            
+        }
+
+        .item-2 {
+            /* background-color: aquamarine; */
+            /* border: 1px solid black; */
+        }
+
+        .item-3 {
+            /* background-color: yellowgreen; */
+        }
+        h3{
+            color: #009270;
+        }
+
+        b{
+            font-size: 30px;
+        }
+        h5{
+            line-height: 30px;
+            color: blue;
+        }
+        span{
+            line-height: 30px;
+            color: blue;
+        }
+        .footer{
+            background-color: #4a4a4a;
+            color: #ffffff;
+        }
+        .footer1{
+            height:200px;
+            width:1200px;
+            background-color: #4a4a4a;
+            border:1px solid black ;
+            display: flex;
+            justify-content: space-between;
+            line-height: 50px;
+            padding: 50px;
+        }
+        .img-1{
+            color: white;
+        }
+        .img-2{
+            color: white;
+        }
+        .img-3{
+            color: white;
+        }
+
+        body{
+            border: 1px solid black;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+    <a href="box"><img src="https://static.cricbuzz.com/images/cb_logo.svg" alt="imges" height="50px"></a>
+    <a class="box">Live Score</a>
+    <a class="box">Schudel</a>
+    <a class="box">Archives</a>
+    <a class="box">News</a>
+    <a class="box">Series</a>
+    <a class="box">Teams</a>
+    <a class="box">Videos</a>
+    <a class="box">Rankings</a>
+    <a class="box">More</a>
+    <a class="box"><input placeholder=" cricbuzz   plus"></a>
+     <a class="box"><img src="data:image/png;base64,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" alt="search"height=30px></a>
+    <a class="box"><img src="data:image/png;base64,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" alt="images" height="30px"></a>
+    </div>
+
+<div class="count">
+<a class="bo1">MATCHES</a>
+<a class="bo1">ZIM vs IND preview</a>
+<a class="bo1">SFU vs LAKR-preview</a>
+<a class="bo1">MINY vs WAF-WAF won</a>
+<a class="bo1">INDW vs RSAW-Preview</a>
+<a class="bo1">ZIM vs IND-ZIM won</a>
+<a class="bo1">ALL</a> 
+</div> 
+
+<div class="count_box">
+    <a class="box2">  2nd T20.  india tour of Zimbabwe , 2024
+        <br><br>
+        <img src="https://static.cricbuzz.com/a/img/v1/25x18/i1/c172127/zimbabwe.jpg" title="Zimbabwe" class="cb-img-rad-0" width="15px" height="16px">
+        Zimbabwe
+        <br><br><br>
+        <img src="https://static.cricbuzz.com/a/img/v1/25x18/i1/c172115/india.jpg" title="India" class="cb-img-rad-0" width="15px" height="18px">
+        india
+        <br><br><br>
+        Today,04:00 AM
+        
+    </a>
+    <a class="box2"> 4th Match • Tamil Nadu Premier League 2024 
+        <br><br>
+        <img src="https://static.cricbuzz.com/a/img/v1/25x18/i1/c172420/chepauk-super-gillies.jpg" title="Chepauk Super Gillies" class="cb-img-rad-0" width="18px" height="12px">
+        CSG 
+        <br><br><br>
+        <img src="https://static.cricbuzz.com/a/img/v1/25x18/i1/c206917/nellai-royal-kings.jpg" title="Nellai Royal Kings" class="cb-img-rad-0"width="18px" height="12px">
+        NRK
+        <br><br><br>
+        Nellai Royal Kings opt to bowl
+    </a>
+
+    <a class="box2">4th Match • Major League Cricket 2024
+        <br><br>
+        <img src="https://static.cricbuzz.com/a/img/v1/25x18/i1/c333487/san-francisco-unicorns.jpg" title="San Francisco Unicorns" class="cb-img-rad-0"width="25px" height="30px">
+          San Francisco Unicorns
+          <br><br><br>
+          <img src="https://static.cricbuzz.com/a/img/v1/25x18/i1/c172313/south-africa-women.jpg" title="South Africa Women" class="cb-img-rad-0" width="18px" height="12px">
+          South Africa Women
+          <br><br><br>
+          Today,Match - 02:PM
+    </a>
+         <a class="box2"> 4th Match • Tamil Nadu Premier League 2024 
+        <br><br>
+        <img src="https://static.cricbuzz.com/a/img/v1/25x18/i1/c172420/chepauk-super-gillies.jpg" title="Chepauk Super Gillies" class="cb-img-rad-0" width="18px" height="12px">
+        CSG 
+        <br><br><br>
+        <img src="https://static.cricbuzz.com/a/img/v1/25x18/i1/c206917/nellai-royal-kings.jpg" title="Nellai Royal Kings" class="cb-img-rad-0"width="18px" height="12px">
+        NRK
+        <br><br><br>
+        Nellai Royal Kings opt to bowl
+         </a>
+         </div>
+
+         <nav class="cric">
+           <div class="box3"><h1> T20 world cup 2024 </h1></div>
+           <div class="box3">Matches</div>
+           <div class="box3">Videos</div>
+           <div class="box3">Point-table</div>
+           <div class="box3">Squads</div>
+         </nav>
+         <br>
+         <div class="call">
+            <div class="box4"><h1>Quick Access</h1></div>
+            <div class="box4">T20 world cup</div>
+            <div class="box4">Fantasy Handbook</div>
+            <div class="box4">See plans</div>
+            <div class="box4">Team india</div>
+            <div class="box4">+ cricbuzz</div>
+            <div class="box4">CB plus &</div>
+         </div>
+            <br>
+
+         <div class="bitu">
+            <div class="item-1"><h3>LATEST NEWS</h3>
+Rejuvenated Jahanara gets 
+ready for Asia Cup
+3h ago
+<br><hr>
+Pienaar, Milantha accentuate MLC's
+ domestic player charm
+3h ago
+<br><hr>
+Top ICC official Chris Tetley 
+and Claire Furlong resign
+11h ago
+<br><hr>
+Playing for England best job in
+ the world, says Anderson
+15h ago
+<br><hr>
+Gambhir urges India's cricketers 
+to play all three formats
+17h ago
+<br><hr>
+Zimbabwe pick four uncapped players
+for Ireland Test
+18h ago
+<br><hr>
+Veteran Nabi sets his sight on 2026 
+T20 World Cup
+19h ago
+<br><hr>
+Ferguson, Netravalkar power Washington
+to the top
+1d ago
+<br><hr>
+Gambhir wants Morne Morkel as bowling coach;
+BCCI yet to take final call
+1d ago
+<br><hr>
+Hasaranga steps down as Sri Lanka's T20I 
+captain
+1d ago
+            </div>
+            <div class="item-2">INDIA COACHING STAFF
+               <center> <img src="https://static.cricbuzz.com/a/img/v1/420x235/i1/c516609/gambhir-wants-morne-morkel-as.jpg" alt="img" width="500px"></center>
+                <center><b>Gambhir wants Morne Morkel as
+                bowling coach; BCCI yet to take
+                final call</b></center>
+                <h5>
+                The duo have worked together at Lucknow Super Giants in the IPL previousl
+                previously
+                Gambhir pushes ten Doeschate's case for India coaching roleTo be or not to be
+                is NOT the questionAbhishek Nayar set to join Gambhir's support staffGambhir urges
+                India's cricketers to play all three formats.
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci magnam similique 
+                nesciunt ut? Tenetur asperiores reprehenderit error sit praesentium, consequuntur nobis
+                 eius maxime eaque illo fugit sunt fugiat veniam animi.
+                </h5>
+                <hr>
+                FAREWELL JIMMY 
+                  <center><img src="https://static.cricbuzz.com/a/img/v1/420x235/i1/c516688/playing-for-england-best-job-i.jpg" alt="imges"></center>
+                    <b>Playing for England   best job in the world, 
+                        says Anderson</b> 
+                        <br>
+                        <span>An emotional Anderson was 'overwhelmed' by the support and adulation he received from all the corners 
+                        as he finished his career with 704 Test wickets
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur in nostrum, numquam inventore animi
+                        autem laudantium pariatur itaque deleniti perferendis quos molestiae! Magnam aut sed possimus nemo soluta
+                        reprehenderit blanditiis.</span>
+                        <br>
+                        <hr>
+                        T20 WORLD CUP 2024
+                        <br>
+                        <center><img src="https://static.cricbuzz.com/a/img/v1/420x235/i1/c516716/top-icc-official-chris-tetley.jpg" alt="imges"></center>
+                        <br>
+                        <b>Top ICC official Chris Tetley and Claire Furlong resign</b>
+
+                        <li style="line-height: 30px;">The resignations, coming immediately after the World Cup and about a week 
+                        ahead of ICC's annual conference in Colombo, are believed to be related to
+                         the conduct of the championship Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero dignissimos 
+                         quam et natus officiis error, ea excepturi, inventore beatae eius rerum. Aut eos, deleniti facere temporibus 
+                         laborum laboriosam natus. Quibusdam!
+                        </li>
+                        <br>
+                    </div>
+            <div class="item-3"><h3>FEATURED VIDEOS</h3>
+                <iframe width="300px" height="200px" src="https://www.youtube.com/embed/0tpw4NCcWfw?si=578g6tOu4lCdvmNt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <br>
+                <br>
+                <br>
+                <iframe width="300px" height="200px" src="https://www.youtube.com/embed/4oSPHA3tu54?si=5QEvmBSoaQu0o5yD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <br><br><br>
+                <iframe width="300px" height="200px" src="https://www.youtube.com/embed/3yiWqnKl7lQ?si=AW9fc_i_nOIv5vYo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <br><br><br>
+                <iframe width="300px" height="200px" src="https://www.youtube.com/embed/nWyFvgaTCYo?si=I27D7uldfdoAo7ym" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <br><br><br>
+                <iframe width="300px" height="200px" src="https://www.youtube.com/embed/RAe11irS-1g?si=L_3PkBdhGO3Gexlo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+         </div>
+
+         <footer class="footer1">
+            <div class="img"><img src="https://static.cricbuzz.com/images/cb_logo.svg" alt="img" height="50px">
+            <div class="img"></div>
+            <div class="img"></div>
+            <div class="img"></div>
+        </div>
+         
+        <div class="img-1">MOBILE SITE & APPS
+            <div class="img-1">m.cricbuzz.com</div>
+            <div class="img-1">Android</div>
+            <div class="img-1">iOS</div>
+        </div>
+
+        <div class="img-2">FOLLOW US ON
+            <div class="img-2">facebook</div>
+            <div class="img-2">twitter</div>
+            <div class="img-2">youtube</div>
+            <div class="img-2">Pinterest</div>
+        </div>
+
+        <div class="img-3">COMPANY
+            <div class="img-3">Careers</div>
+            <div class="img-3">Advertise</div>
+            <div class="img-3"> Privacy Policy</div>
+            <div class="img-3">Terms of Use</div>
+            <div class="img-3">Cricbuzz TV Ads</div> | 
+        </div>
+         </footer>
+
+</body> 
+</html> 
